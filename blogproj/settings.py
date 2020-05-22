@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'mainapp',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -108,6 +109,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# login URLS and User model to use for authentication
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'index'
+AUTH_USER_MODEL = 'users.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
